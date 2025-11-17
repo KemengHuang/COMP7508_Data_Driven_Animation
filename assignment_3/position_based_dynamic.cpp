@@ -114,7 +114,7 @@ bool load_triMesh(const std::string& filename, objMesh& mesh) {
 				int faceVertIndexX, faceVertIndexY, faceVertIndexZ;
 				int faceNormalIndexX, faceNormalIndexY, faceNormalIndexZ;
 
-				if (sscanf_s(buffer, "f %d/%d/%d %d/%d/%d %d/%d/%d", &faceVertIndexX, &uv0, &faceNormalIndexX,
+				if (sscanf(buffer, "f %d/%d/%d %d/%d/%d %d/%d/%d", &faceVertIndexX, &uv0, &faceNormalIndexX,
 					&faceVertIndexY, &uv1, &faceNormalIndexY,
 					&faceVertIndexZ, &uv2, &faceNormalIndexZ) == 9) {
 
@@ -122,7 +122,7 @@ bool load_triMesh(const std::string& filename, objMesh& mesh) {
 					faceVertIndexY -= 1;
 					faceVertIndexZ -= 1;
 				}
-				else if (sscanf_s(buffer, "f %d %d %d", &faceVertIndexX,
+				else if (sscanf(buffer, "f %d %d %d", &faceVertIndexX,
 					&faceVertIndexY,
 					&faceVertIndexZ) == 3) {
 					faceVertIndexX -= 1;

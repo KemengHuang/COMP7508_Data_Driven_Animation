@@ -14,5 +14,6 @@ find_package(Eigen3 REQUIRED)
 
 find_package(GLEW REQUIRED)
 find_package(GLUT REQUIRED)
+find_package(OpenGL REQUIRED)
 target_compile_definitions(pbd PRIVATE input_dir="${CMAKE_CURRENT_SOURCE_DIR}")
-target_link_libraries(pbd PRIVATE GLUT::GLUT GLEW::GLEW Eigen3::Eigen)
+target_link_libraries(pbd PRIVATE GLUT::GLUT GLEW::GLEW OpenGL::GLU Eigen3::Eigen)
